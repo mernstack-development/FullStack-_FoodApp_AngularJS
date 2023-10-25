@@ -1,0 +1,17 @@
+/* Importing google font into our project */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family: "Quicksand", sans-serif;
+    font-size:25px;
+}
+
+a{
+  text-decoration:none;
+}

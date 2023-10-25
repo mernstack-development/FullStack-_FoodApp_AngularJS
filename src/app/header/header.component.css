@@ -1,0 +1,43 @@
+header{
+  background-color: white;
+  padding: 0;
+  border-bottom: 1px solid #af1313;
+  box-shadow: 0 1px 2px 0 rgba(175, 19, 19, 0.95), 0 0.5px 5px 0 rgba(175, 19, 19, 0.75);
+}
+
+
+a {
+  color:#af1313
+}
+
+a:hover {
+  font-weight:bold;
+  background: rgba(175, 19, 19, 0.55);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content:space-between;
+}
+
+a.logo {
+  font-weight: bold;
+  padding: 1em;
+}
+
+
+nav ul {
+  list-style-type: none;
+  margin:0;
+}
+
+nav ul li a {
+  padding: 1em;
+  display: inline-block;
+}
+
+
