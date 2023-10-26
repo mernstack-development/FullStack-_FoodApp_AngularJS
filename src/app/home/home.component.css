@@ -12,7 +12,7 @@ ul li a img {
 }
 
 ul li a{
-    height: 25rem;
+    height: 32rem;
     width: 20rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
@@ -25,4 +25,44 @@ ul li a{
 li a:hover{
     opacity: 0.9;
     cursor: pointer;
+}
+
+
+.content .FoodName {
+  font-size: 21px;
+  margin: 10px;
+  font-weight:bold;
+}
+
+.favorite{
+  font-size:30px;
+    position:relative;
+       left:40%;
+       color: red;
+}
+
+.product-item-origins .origins{
+ margin-left:10px;
+ font-size:20px;
+}
+
+.priceCooktime{
+  display:flex;
+  justify-content:space-between;
+}
+.cook-time{
+  font-size:20px;
+  margin-left: 8px;
+  margin-top: 7px;
+}
+
+.price{
+  margin-right:15px;
+  margin-top: 7px;
+}
+
+
+.product-item-origins{
+  margin-top: 10px;
+  font-size:15px;
 }
