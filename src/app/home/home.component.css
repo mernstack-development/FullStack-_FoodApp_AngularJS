@@ -12,7 +12,7 @@ ul li a img {
 }
 
 ul li a{
-    height: 32rem;
+    height: 22.5rem;
     width: 20rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
@@ -25,44 +25,57 @@ ul li a{
 li a:hover{
     opacity: 0.9;
     cursor: pointer;
+    box-shadow: 1px 1px 12px 1px rgba(128,128,128,1);
+    -webkit-box-shadow: 1px 1px 12px 1px rgba(128,128,128,1);
+    -moz-box-shadow: 1px 1px 12px 1px rgba(128,128,128,1);
 }
 
 
-.content .FoodName {
-  font-size: 21px;
-  margin: 10px;
-  font-weight:bold;
+.content {
+  padding: .5rem 1rem;
+  position:relative;
 }
 
 .favorite{
-  font-size:30px;
-    position:relative;
-       left:40%;
-       color: red;
+  position: absolute;
+  top:.5rem;
+  right:1rem;
+  font-size:1.2rem;
 }
 
-.product-item-origins .origins{
- margin-left:10px;
- font-size:20px;
+.favorite.not {
+  color: gray;
 }
 
-.priceCooktime{
+.product-item-footer{
   display:flex;
-  justify-content:space-between;
+  justify-content: space-between;
+  align-items: center;
+
 }
+
+.origins{
+  flex:9;
+}
+
+.origins span{
+  border-radius: 2rem;
+  background-color: whitesmoke;
+  display: inline-block;
+  font-size:1rem;
+  margin-right: .3rem;
+  padding: 7px;
+}
+
 .cook-time{
-  font-size:20px;
-  margin-left: 8px;
-  margin-top: 7px;
+  font-size:1rem;
+  flex:3;
+  text-align: right;
 }
 
-.price{
-  margin-right:15px;
-  margin-top: 7px;
-}
+.price {
+  color: #414141;
+  margin-top: .8rem;
+  font-size:1.2rem;
 
-
-.product-item-origins{
-  margin-top: 10px;
-  font-size:15px;
 }
