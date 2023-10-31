@@ -7,11 +7,15 @@ import { Tag } from '../../shared/models/Tag';
 })
 
 export class FoodService {
-
   constructor() { }
 
+//Getting food info by ID
+getFoodById(id: number): Food{
+  return this.getAll().find(food => food.id == id)!;
+}
+
   //Function to get all Foods By searchTerm
-getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
+  getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
   return this.getAll().filter(food =>
   food.Food_Name.toLowerCase().includes(searchTerm.toLowerCase()));
 }
@@ -19,17 +23,13 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
   getAllTags():Tag[]{
     return [
       { Tag_Name: 'All', count: 10 },
-      { Tag_Name: 'FastFood', count: 1 },
-      { Tag_Name: 'Popular', count: 7 },
       { Tag_Name: 'Non-veg', count: 6 },
+      { Tag_Name: 'Vegetarian', count: 3 },
       { Tag_Name: 'Burger', count: 2 },
       { Tag_Name: 'Pasta', count: 2 },
-      { Tag_Name: 'Seafood', count: 1 },
       { Tag_Name: 'Pizza', count: 2 },
-      { Tag_Name: 'Vegetarian', count: 3 },
-      { Tag_Name: 'Sandwich', count: 1 },
-      { Tag_Name: 'Sushi', count: 2},
       { Tag_Name: 'Asian', count: 2 },
+      { Tag_Name: 'Sandwich', count: 2 },
 ];
 
 }
@@ -54,7 +54,7 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
         origins: ['Finland', 'Globe'],
         stars: 3.8,
         imageURL: '/assets/images/foods/Food_1.jpg',
-        tags: ['FastFood', 'Popular','Non-veg']
+        tags: ['Non-veg','Sandwich']
         },
         {
         id:2,
@@ -65,7 +65,7 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
         origins: ['US','Germany'],
         stars: 4.5,
         imageURL: '/assets/images/foods/Food_2.jpg',
-        tags: ['Burger','popular','Non-veg']
+        tags: ['Burger','Non-veg']
         },
         {
         id:3,
@@ -76,7 +76,7 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
         origins: ['US', 'Globe'],
         stars: 3.5,
         imageURL: '/assets/images/foods/Food_3.jpg',
-        tags: ['Burger','Popular'],
+        tags: ['Burger','Non-veg'],
         },
         {
         id:4,
@@ -87,7 +87,7 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
         origins: ['Europe','US'],
         stars: 3.7,
         imageURL: '/assets/images/foods/Food_4.jpg',
-        tags: ['Seafood','Non-veg','Pasta']
+        tags: ['Non-veg','Pasta']
         },
         {
         id:5,
@@ -98,7 +98,7 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
         origins: ['Globe'],
         stars: 4.5,
         imageURL: '/assets/images/foods/Food_5.jpg',
-        tags: ['Pizza','Vegetarian','Popular']
+        tags: ['Pizza','Vegetarian']
         },
         {
         id:6,
@@ -109,7 +109,7 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
         origins: ['Europe','Globe'],
         stars: 5.0,
         imageURL: '/assets/images/foods/Food_6.jpg',
-        tags: ['Pasta','Vegetarian','Popular']
+        tags: ['Pasta','Vegetarian']
         },
         {
         id:7,
@@ -120,7 +120,7 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
         origins: ['US'],
         stars: 3.6,
         imageURL: '/assets/images/foods/Food_7.jpg',
-        tags: ['Sandwich','Vegetarian','Popular']
+        tags: ['Vegetarian','Sandwich']
         },
         {
         id:8,
@@ -131,7 +131,7 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
         origins: ['Japan','Globe'],
         stars: 1.5,
         imageURL: '/assets/images/foods/Food_8.jpg',
-        tags: ['Sushi','Asian','Popular','Non-veg']
+        tags: ['Asian','Non-veg']
         },
         {
         id:9,
@@ -142,7 +142,7 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
         origins: ['Japan', 'Globe'],
         stars: 2.5,
         imageURL: '/assets/images/foods/Food_9.jpg',
-        tags: ['Sushi','Asian','Non-veg','Popular']
+        tags: ['Asian','Non-veg']
         },
         {
         id:10,
