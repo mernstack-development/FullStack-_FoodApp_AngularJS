@@ -16,7 +16,7 @@
         </span>
       </div>
       <div class="tags">
-        <app-tags [foodPageTags]="food.tags"></app-tags>
+        <app-tags [foodPageTags]="food.tags" JustifyContent = "start"></app-tags>
       </div>
      <div class="cookTime">
        <span>Time to cook about <strong>{{ food.cookTime}}</strong> minutes</span>
@@ -26,5 +26,6 @@
        <span>{{ food.price | currency:'€'}}</span>
      </div>
     <button>Add to Cart</button>
+    <a routerLink="/"><button>Go Back</button></a>
   </div>
 </div>
