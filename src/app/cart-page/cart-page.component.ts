@@ -12,16 +12,17 @@ import { CartItem } from '../shared/models/CartItem';
 export class CartPageComponent implements OnInit {
   cart!:Cart;
   // Injecting cart service
-  constructor(private cartService: CartService) {
-    this.setCart()
-  }
+  constructor( private cartService: CartService ) {
 
-  ngOnInit():void {
+    this.setCart()
+}
+
+ngOnInit():void {
   }
 
   //removing from Cart
-  removeFromCart(cartItem:CartItem){
-    this.cartService.removeFromCart(cartItem.food.id);
+  removeFromCart( cartItem:CartItem ){
+    this.cartService.removeFromCart( cartItem.food.id );
     //refreshing the cart
     this.setCart();
   }
@@ -29,8 +30,8 @@ export class CartPageComponent implements OnInit {
   //Cahnging quantity
   changeQuantity(cartItem:CartItem, quantityInString:string){
     //parsing quantityInString
-    const quantity = parseInt(quantityInString);
-    this.cartService.changeQuantity(cartItem.food.id, quantity);
+    const quantity = parseInt( quantityInString );
+    this.cartService.changeQuantity( cartItem.food.id, quantity );
     this.setCart();
   }
 
