@@ -24,8 +24,8 @@ getAllFoodsBySearchTerm(searchTerm:string) :Food[]{
 getAllTags():Tag[]{
     return [
       { Tag_Name: 'All', count: 27 },
-      { Tag_Name: 'Non-veg', count: 16},
-      { Tag_Name: 'Vegetarian', count:10  },
+      { Tag_Name: 'Non-veg', count: 15},
+      { Tag_Name: 'Vegetarian', count:10 },
       { Tag_Name: 'Burger', count: 2 },
       { Tag_Name: 'Pasta', count:3 },
       { Tag_Name: 'Pizza', count: 2 },
@@ -275,7 +275,7 @@ getAll():Food[]{
         favorite: true,
         origins: ['Asia','Europe','American'],
         imageURL: '/assets/images/foods/Food_23.jpg',
-        tags: ['Asian','Non-veg','Sweets']
+        tags: ['Asian','Sweets']
       },
       {
         id:24,
