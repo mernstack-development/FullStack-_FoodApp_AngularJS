@@ -9,15 +9,21 @@
           ❤
         </span>
 
+        <app-not-found [visible]="!food" notFoundMessage="Product Not Found!" resetLinkText="Back To Homepage"></app-not-found>
+
       </div>
       <div class="origins">
         <span *ngFor="let origin of food.origins">
           {{ origin }}
         </span>
       </div>
+
+
       <div class="tags">
         <app-tags [foodPageTags]="food.tags" JustifyContent = "start"></app-tags>
       </div>
+
+
      <div class="cookTime">
        <span>Time to cook about <strong>{{ food.cookTime}}</strong> minutes</span>
      </div>
